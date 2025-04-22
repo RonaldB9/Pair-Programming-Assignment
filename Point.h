@@ -8,6 +8,7 @@ public:
 	Point(double x, double y);
 	string getCoords();
 private:
-	double xChoord;
-	double yChoord;
+	double roundDoubles(double number);
+	double xCoord;
+	double yCoord;
 };
