@@ -1,8 +1,8 @@
 #include <iostream>
 #include <assert.h>
 using namespace std;
-#include "Point.h"
-#include "Line.h"
+#include "Point.h";
+#include "Line.h";
 
 void createPoint();
 void createLine();
@@ -29,4 +29,5 @@ void createPoint()
 
 void createLine() {
     Line line1(1.1, 2.2, 3.3, 4.4);
+    cout << line1.getPoints();
 }

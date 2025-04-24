@@ -38,3 +38,11 @@ string Point::addDecimal(string num) {
 	}
 	return num += ".0";
 }
+
+double Point::getX () {
+	return xCoord;
+}
+
+double Point::getY () {
+	return yCoord;
+}

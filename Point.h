@@ -7,6 +7,8 @@ class Point
 public:
 	Point(double x, double y);
 	string getCoords();
+	double getX();
+	double getY();
 private:
 	double roundDoubles(double number);
 	string addDecimal(string num);
