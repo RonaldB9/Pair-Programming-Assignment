@@ -9,7 +9,6 @@ public:
 	string getCoords();
 private:
 	double roundDoubles(double number);
-	string addDecimal(string num);
 	double xCoord;
 	double yCoord;
 };
