@@ -9,6 +9,7 @@ public:
     string getPoints();
     bool isParall(Line checkLine, Line checkLine2);
     double calculateLength();
+    bool isPointOnLine(Point point);
 private:
     Point point1;
     Point point2;

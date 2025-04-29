@@ -41,4 +41,8 @@ void createLine() {
     assert(line5.calculateLength() == 11.0);
     Line line6 (0.0, 0.0, 0.0, 0.0);
     assert(line6.calculateLength() == 0.0);
+
+    // on line test
+    Point point1(1.0, 1.0);
+    cout << line5.isPointOnLine(point1) << endl;
 }

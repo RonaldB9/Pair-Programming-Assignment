@@ -3,6 +3,7 @@
 
 Line::Line(double x1, double y1, double x2, double y2) : point1(x1, y1), point2(x2, y2) {}
 
+
 string Line::getPoints() {
     return "Point 1: [" + point1.getCoords() + "], Point 2: [" + point2.getCoords() + "]";
 }
@@ -39,4 +40,11 @@ double Line::calculateLength() {
     double y = point1.getY() - point2.getY();
     double length = sqrt((x * x) + (y * y));
     return length;
+}
+
+bool Line::isPointOnLine(Point point) {
+    Line section1(point1.getX(), point1.getY(), point.getX(), point.getY());
+    Line section2(point2.getX(), point2.getY(), point.getX(), point.getY());
+
+    return true;
 }
