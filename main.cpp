@@ -35,4 +35,10 @@ void createLine() {
     Line line3(1, 1, 4, 4);
     Line line4(4, 1, 1, 4);
     assert(line1.isParall(line3, line4) == false);
+
+    //length tests
+    Line line5(11.0, 1.0, 11.0, 12.0);
+    assert(line5.calculateLength() == 11.0);
+    Line line6 (0.0, 0.0, 0.0, 0.0);
+    assert(line6.calculateLength() == 0.0);
 }

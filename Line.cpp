@@ -1,4 +1,5 @@
 #include "Line.h"
+#include <cmath>
 
 Line::Line(double x1, double y1, double x2, double y2) : point1(x1, y1), point2(x2, y2) {}
 
@@ -31,4 +32,11 @@ bool Line::isParall(Line checkLine1, Line checkLine2) {
     else {
         return false;
     }
+}
+
+double Line::calculateLength() {
+    double x = point1.getX() - point2.getX();
+    double y = point1.getY() - point2.getY();
+    double length = sqrt((x * x) + (y * y));
+    return length;
 }

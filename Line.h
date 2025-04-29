@@ -8,6 +8,7 @@ public:
     Line(double x1, double y1, double x2, double y2);
     string getPoints();
     bool isParall(Line checkLine, Line checkLine2);
+    double calculateLength();
 private:
     Point point1;
     Point point2;
