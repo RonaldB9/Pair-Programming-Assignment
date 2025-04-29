@@ -31,7 +31,7 @@ void createLine() {
     Line line1(1.1, 2.2, 3.3, 4.4);
     cout << line1.getPoints();
     Line line2(2.1, 3.2, 4.3, 5.4);
-    assert(line1.isParall(line1, line2) == true);
+    assert(line1.isParall(line2) == true);
     Line line3(1, 1, 4, 4);
     Line line4(4, 1, 1, 4);
     assert(line1.isParall(line3, line4) == false);
@@ -45,4 +45,10 @@ void createLine() {
     // on line test
     Point point1(1.0, 1.0);
     cout << line5.isPointOnLine(point1) << endl;
+    assert(line3.isParall(line4) == false);
+     //length tests
+     Line line5(11.0, 1.0, 11.0, 12.0);
+     assert(line5.calculateLength() == 11.0);
+     Line line6 (0.0, 0.0, 0.0, 0.0);
+     assert(line6.calculateLength() == 0.0);
 }
