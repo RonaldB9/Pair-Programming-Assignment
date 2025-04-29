@@ -4,10 +4,11 @@ using namespace std;
 
 class Line {
 
-    public:
-        Line(double x1, double y1, double x2, double y2);
-        string getPoints();
-    private:
-        Point point1;
-        Point point2;
-    };
+public:
+    Line(double x1, double y1, double x2, double y2);
+    string getPoints();
+    bool isParall(Line checkLine, Line checkLine2);
+private:
+    Point point1;
+    Point point2;
+};

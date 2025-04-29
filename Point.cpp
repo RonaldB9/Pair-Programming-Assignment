@@ -11,7 +11,7 @@ string Point::getCoords() {
 	yCoord = roundDoubles(yCoord);
 	stringstream sx;
 	stringstream sy;
-	sx << xCoord; 
+	sx << xCoord;
 	sy << yCoord;
 	string xCoordString;
 	sx >> xCoordString;
@@ -20,7 +20,7 @@ string Point::getCoords() {
 	sy >> yCoordString;
 	//cout << yCoordString << endl;
 
-	return("X: "+addDecimal(xCoordString)+ ", Y: " + addDecimal(yCoordString));
+	return("X: " + addDecimal(xCoordString) + ", Y: " + addDecimal(yCoordString));
 }
 
 double Point::roundDoubles(double number) {
@@ -39,10 +39,10 @@ string Point::addDecimal(string num) {
 	return num += ".0";
 }
 
-double Point::getX () {
+double Point::getX() {
 	return xCoord;
 }
 
-double Point::getY () {
+double Point::getY() {
 	return yCoord;
 }
