@@ -35,7 +35,7 @@ bool Line::isParall(Line& checkLine){
     }
 }
 
-double Line::calculateLength() {
+double Line::length() {
     double x = point1.getX() - point2.getX();
     double y = point1.getY() - point2.getY();
     double length = sqrt((x * x) + (y * y));
@@ -43,8 +43,12 @@ double Line::calculateLength() {
 }
 
 bool Line::isPointOnLine(Point point) {
+    Line original(point1.getX(), point1.getY(), point2.getX(), point2.getY());
     Line section1(point1.getX(), point1.getY(), point.getX(), point.getY());
     Line section2(point2.getX(), point2.getY(), point.getX(), point.getY());
-
-    return true;
+    if (original.isParall(section1) && original.isParall(section2) && original.length() == section1.length() + section2.length()) {
+        return true;
+    } else {
+        return false;
+    }
 }
