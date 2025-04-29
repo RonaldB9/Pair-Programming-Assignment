@@ -6,16 +6,16 @@ Line::Line(double x1, double y1, double x2, double y2) : point1(x1, y1), point2(
 string Line::getPoints() {
     return "Point 1: [" + point1.getCoords() + "], Point 2: [" + point2.getCoords() + "]";
 }
-bool Line::isParall(Line checkLine1, Line checkLine2) {
+bool Line::isParall(Line& checkLine){
     //check vertical
-    double s1X1 = checkLine1.point1.getX();
-    double s1Y1 = checkLine1.point1.getY();
-    double s1X2 = checkLine1.point2.getX();
-    double s1Y2 = checkLine1.point2.getY();
-    double s2X1 = checkLine2.point1.getX();
-    double s2Y1 = checkLine2.point1.getY();
-    double s2X2 = checkLine2.point2.getX();
-    double s2Y2 = checkLine2.point2.getY();
+    double s1X1 = point1.getX();
+    double s1Y1 = point1.getY();
+    double s1X2 = point2.getX();
+    double s1Y2 = point2.getY();
+    double s2X1 = checkLine.point1.getX();
+    double s2Y1 = checkLine.point1.getY();
+    double s2X2 = checkLine.point2.getX();
+    double s2Y2 = checkLine.point2.getY();
     if (s1X1 == s1X2 && s2X1 == s2X2) {
         //This checks if both lines are vertical
         return true;
